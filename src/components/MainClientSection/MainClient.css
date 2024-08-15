@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.client-logo-backgroung-Section {
+  height: 45vh;
+  /* width: 100vh; */
+  font-family: "Raleway";
+  font-style: normal;
+  position: relative;
+  overflow: hidden;
+}
+.omc-parent-div {
+  margin-top: 100px;
+}
+.omc-text {
+  color: black;
+  font-size: xx-large;
+}
+div div .img {
+  display: flex;
+  margin-top: 70px;
+  /* width: 200px;
+  height: 200px;  */
+  background-color: transparent;
+}
+.clients-logo-div {
+  display: flex;
+  gap: 150px;
+  animation: scroll linear 30s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(103%);
+  }
+  100% {
+    transform: translateX(-103%);
+  }
+}
+.img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+@media (max-width: 834px) {
+  client-logo-backgroung-Section {
+    padding: 80px 0;
+  }
+}

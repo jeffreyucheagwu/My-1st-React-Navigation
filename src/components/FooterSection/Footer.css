@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footer-background-section {
+  height: 23vh;
+  background-color: #0e1015;
+}
+.footer-parent-div {
+  display: flex;
+  /* justify-content: flex-end; */
+  text-align: center;
+  align-content: center;
+  gap: 400px;
+  padding-left: 120px;
+  padding-top: 50px;
+}
+.tc-text {
+  font-family: "raleway";
+  color: white;
+  align-self: center;
+  width: auto;
+}
+.sm-logo-div {
+  display: flex;
+  color: white;
+  height: 100px;
+  width: 100px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.go-back-to-top-parent-div {
+  /* padding-bottom: 50px; */
+  height: 50px;
+  text-align: right;
+  background-color: #0e1015;
+  padding-right: 20px;
+}
+a {
+  font-size: small;
+  background-color: #0e1015;
+  border-style: solid;
+  border-width: 2px;
+  height: 10px;
+  background-color: #0e1015;
+  color: rgba(245, 245, 245, 0.572);
+}
+a.back-to-top {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  padding: 8px 11px;
+}
+
+a:hover {
+  background-color: #0e1015;
+  color: whitesmoke;
+}
+@media (max-width: 834px) {
+  .footer-background-section {
+    height: 10vh;
+    background-color: #0e1015;
+  }
+  .footer-parent-div {
+    display: block;
+    border-color: #0e1015;
+    background-color: #0e1015;
+    font-family: "Raleway";
+    .pa {
+      font-size: 18px;
+      color: whitesmoke;
+      background-color: #0e1015;
+      border-color: #0e1015;
+      padding: auto;
+      border-style: solid;
+      border-width: 10px;
+    }
+    a {
+      background-color: #0e1015;
+      border-color: #0e1015;
+      margin-right: 20px;
+      color: whitesmoke;
+    }
+  }
+}

@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import logo from "./logo.svg";
+import "./App.css";
+import HomePage from "./home/HomePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./screens/LoginScreen/Login";
+import AboutUs from "./screens/LoginScreen/AboutUs";
+import OurService from "./screens/LoginScreen/OurService";
+import { ContactPage } from "@mui/icons-material";
+import Contact from "./screens/LoginScreen/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/About" element={<AboutUs />} />
+          <Route path="/OurService" element={<OurService />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

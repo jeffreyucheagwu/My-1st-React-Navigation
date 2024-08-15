@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.testimonial-background-Section {
+  background-image: url("../../assets/imageSection/photo-1451417379553-15d8e8f49cde.jpg");
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-display: swap;
+  background-attachment: fixed;
+}
+.wocs-text {
+  font-weight: 200;
+  font-size: xx-large;
+}
+.wocs-body-text {
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 25px;
+  width: 51%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+}
+.client-picture-name {
+  text-align: center;
+  margin-top: 20px;
+}
+.client-picture {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.client-name-text {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+@media (max-width: 834px) {
+  .testimonial-background-Section {
+    background-image: none;
+  }
+  .wocs-text {
+    display: none;
+  }
+  .wocs-body-text {
+    display: none;
+  }
+}

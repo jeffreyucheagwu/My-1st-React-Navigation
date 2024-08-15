@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .image-section-div {
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img-parent-div div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .img-parent-div div {
+    width: 100;
+    height: 100;
+  }
+  /* .hover-div { */
+    /* color: white; */
+    /* width: auto;
+    height: auto; */
+    /* opacity: 0; */
+  /* } */
+  .img-parent-div div .hover-div {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s, ease-in-out;
+  }
+  .img-parent-div div:hover .hover-div {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: 0.3s, ease-in-out;
+  }
+  
+  .img-parent-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+  }
+  
+  /* All Media Query */
+  @media (max-width: 834px) {
+    .img-parent-div div {
+      width: calc(100% / 1);
+    }
+    .img-parent-div {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .parent-div {
+      position: absolute;
+    }
+  }
