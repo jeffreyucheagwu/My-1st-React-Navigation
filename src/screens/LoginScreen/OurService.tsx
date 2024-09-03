@@ -1,8 +1,10 @@
 import React from "react";
+import DrawerAppBar from "../../components/Navbar2/NavbarMui";
 
 const OurService = () => {
   return (
     <div>
+      <DrawerAppBar/>
       <h1>Our Services at JEFFREYCOM Partners</h1>
       At JEFFREYCOM Partners, we offer a comprehensive suite of legal services
       designed to meet the diverse needs of our clients. Our areas of expertise

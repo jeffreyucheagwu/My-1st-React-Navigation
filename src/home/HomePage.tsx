@@ -18,6 +18,7 @@ import MainClient from "../components/MainClientSection/MainClient";
 import WordPress from "../components/WordPressSection/WordPress";
 import Footer from "../components/FooterSection/Footer";
 import ResponsiveAppBar from "../components/Navbar2/NavbarMui";
+import SignUp from "../screens/SignupScreen/SignUp";
 
 const HomePage = () => {
   return (
@@ -27,7 +28,7 @@ const HomePage = () => {
       {/* <AboutUs /> */}
       {/* <Header /> */}
       {/* <Carousel /> */}
-      <Table />
+      {/* <Table /> */}
       {/* <Pagination count={10} color="primary" /> */}
       {/* <Hero /> */}
       {/* <SeoFriendly /> */}
@@ -41,6 +42,7 @@ const HomePage = () => {
       {/* <MainClient /> */}
       {/* <WordPress /> */}
       {/* <Footer /> */}
+      <SignUp/>
     </div>
   );
 };

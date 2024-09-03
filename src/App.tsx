@@ -8,6 +8,8 @@ import AboutUs from "./screens/LoginScreen/AboutUs";
 import OurService from "./screens/LoginScreen/OurService";
 import { ContactPage } from "@mui/icons-material";
 import Contact from "./screens/LoginScreen/Contact";
+import SignUp from "./screens/SignupScreen/SignUp";
+import DashBoard from "./screens/Dashboard/DashBoard";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/About" element={<AboutUs />} />
           <Route path="/OurService" element={<OurService />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/DashBoard" element={<DashBoard />} />
         </Routes>
       </BrowserRouter>
     </div>

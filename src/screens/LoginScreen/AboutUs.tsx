@@ -1,8 +1,10 @@
 import React from "react";
+import DrawerAppBar from "../../components/Navbar2/NavbarMui";
 
 const AboutUs = () => {
   return (
     <div>
+  <DrawerAppBar/>
       <h1>About JEFFREYCOM Partners</h1>
       <p>
         Founded on a commitment to excellence and integrity, JEFFREYCOM Partners
