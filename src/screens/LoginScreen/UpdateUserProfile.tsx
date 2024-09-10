@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import DrawerAppBar from "../../components/Navbar2/NavbarMui";
 
-const SignUp = () => {
+const UpdateUserProfile = () => {
+  const { _id } = useParams();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,8 +32,8 @@ const SignUp = () => {
       "Content - Type": "application/json",
     };
     axios
-      .post(
-        "https://fullstack-student-backend.onrender.com/api/auth",
+      .put(
+        `https://fullstack-student-backend.onrender.com/api/auth/update/${_id}`,
 
         data,
         headers
@@ -39,10 +41,8 @@ const SignUp = () => {
       .then((response: any) => {
         console.log(response.data);
         localStorage.setItem("userId.", response.data._id);
-        localStorage.setItem("firstName.", response.data.firstName);
+        localStorage.setItem("userId.", response.data.firstName);
         navigate("/Dashboard");
-        // navigate("/Comments");
-        // navigate("/Results");
         setLoading(false);
         if (response.data) {
           setSuccessMessage("Signup Successful");
@@ -54,9 +54,10 @@ const SignUp = () => {
         setErrorMessage("Invalid user credentials, failed to create user");
       });
   };
-
   return (
     <div>
+           <DrawerAppBar/>
+
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -65,7 +66,7 @@ const SignUp = () => {
             className="mx-auto h-10 w-auto"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign Up
+            Update User Profile
           </h2>
         </div>
 
@@ -90,7 +91,6 @@ const SignUp = () => {
                   id="firstName"
                   name="firstName"
                   type="firstName"
-                  required
                   autoComplete="firstName"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -111,7 +111,6 @@ const SignUp = () => {
                   id="lastName"
                   name="lastName"
                   type="lastName"
-                  required
                   autoComplete="lastName"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -132,7 +131,6 @@ const SignUp = () => {
                   id="email"
                   name="email"
                   type="email"
-                  required
                   autoComplete="email"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -163,7 +161,6 @@ const SignUp = () => {
                   id="password"
                   name="password"
                   type="password"
-                  required
                   autoComplete="current-password"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -186,7 +183,6 @@ const SignUp = () => {
                   id="password"
                   name="password"
                   type="password"
-                  required
                   autoComplete="current-password"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -200,7 +196,7 @@ const SignUp = () => {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Sign Up
+                  Update Profile
                 </button>
               </div>
             )}
@@ -226,19 +222,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
-function setErrorMessage(arg0: string) {
-  throw new Error("Function not implemented.");
-}
-
-function seLoading(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
-
-function setSuccessMessage(arg0: string) {
-  throw new Error("Function not implemented.");
-}
-
-function then(arg0: (response: any) => void) {
-  throw new Error("Function not implemented.");
-}
+export default UpdateUserProfile;

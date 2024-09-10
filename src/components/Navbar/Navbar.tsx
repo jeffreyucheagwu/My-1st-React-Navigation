@@ -1,6 +1,5 @@
 import React from "react";
 import "./Navbar.css";
-import Login from "../../screens/LoginScreen/Login";
 
 const Navbar = () => {
   return (

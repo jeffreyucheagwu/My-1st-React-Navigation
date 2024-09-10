@@ -19,6 +19,9 @@ import WordPress from "../components/WordPressSection/WordPress";
 import Footer from "../components/FooterSection/Footer";
 import ResponsiveAppBar from "../components/Navbar2/NavbarMui";
 import SignUp from "../screens/SignupScreen/SignUp";
+import UpdateUserProfile from "../screens/LoginScreen/UpdateUserProfile";
+import StudentReport from "../screens/LoginScreen/StudentReport";
+import Login from "../screens/LoginScreen/Login";
 
 const HomePage = () => {
   return (
@@ -42,7 +45,9 @@ const HomePage = () => {
       {/* <MainClient /> */}
       {/* <WordPress /> */}
       {/* <Footer /> */}
-      <SignUp/>
+      <SignUp />
+      {/* <UpdateUserProfile /> */}
+      {/* <Login /> */}
     </div>
   );
 };

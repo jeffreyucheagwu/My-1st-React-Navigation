@@ -23,9 +23,14 @@ const drawerWidth = 240;
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
   { name: "Login", path: "/Login" },
+  { name: "Contact", path: "/contact" },
   { name: "OurService", path: "/OurService" },
+  // { name: "StudentReport", path: "/StudentReport" },
+  // { name: "Result", path: "/Result" },
+  { name: "UpdateUserProfile", path: "/UpdateUserProfile" },
+  { name: "FetchDeleteData", path: "/del" },
+  { name: "DashBoard", path: "/DashBoard" },
 ];
 
 export default function DrawerAppBar(props: Props) {

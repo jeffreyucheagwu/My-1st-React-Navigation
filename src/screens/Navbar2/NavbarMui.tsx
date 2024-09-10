@@ -21,6 +21,7 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = [
+  { name: "Jeffreycom", path: "/Jeffreycom" },
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
